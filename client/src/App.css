@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* color: white; */
+}
+html {
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: black;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 0, 0, 0.538);
+  border-radius: 10px;
+}
+
+.App {
+  text-align: center;
+  background-color: #000000f2;
+  min-block-size: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 5px 10px black;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar button {
+  margin-inline-start: auto;
+}
+
+.dashboard-container {
+  inline-size: 100vw;
+  /* background-color: rgba(0, 0, 0, 0.95); */
+}
+
+.featured-movie-section {
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.95); */
+  inline-size: 100%;
+}
+
+.featured-movie-section h2 {
+  /* margin: 20px 0; */
+  z-index: 0;
+}
+
+.movies-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  overflow-x: scroll;
+  scrollbar-color: dark;
+  padding: 40px 10px;
+  inline-size: 100%;
+  /* margin: auto; */
+  /* background-color: rgba(0, 0, 0, 0.75); */
+}
+
+.container-title {
+  color: white;
+}
+
+.movie-card {
+  /* background-color: lightgrey; */
+  inline-size: min-content;
+  position: relative;
+}
+
+.movie-card-text-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  block-size: 100%;
+  inline-size: 100%;
+  overflow: visible;
+  opacity: 0;
+  font-size: inherit;
+}
+
+.movie-card-text-overlay:hover {
+  opacity: 100%;
+}
+
+.movie-card img {
+  width: 120px;
+}
+
+.movie-card-text-overlay h4 {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.movie-card-overlay-btns {
+  display: flex;
+  gap: 5px;
+  align-self: center;
+  margin-block-start: auto;
+  margin-block-end: 10px;
+  flex: 1;
+}
+
+.movie-card-overlay-btns div {
+  font-size: 0.5rem;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  padding: 2px 5px;
+  align-self: center;
+}
+
+.movie-card:hover {
+  /* transform: scale(1.5); */
+  animation: card-grow 0.24s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 111;
+  overflow: visible;
+}
+
+p {
+  color: red;
+}
+
+@keyframes card-grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
